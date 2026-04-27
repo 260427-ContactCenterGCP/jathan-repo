@@ -1,5 +1,5 @@
 
-<img src = "./images/assignment1.png">
+![Assignment screenshot](./assignment1.png)
 
 ## Cloud Build
 •	2,500 build-minutes per month for machine type e2-standard-2.
