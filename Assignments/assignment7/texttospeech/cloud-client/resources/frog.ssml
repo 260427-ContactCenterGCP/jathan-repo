@@ -1,0 +1,13 @@
+<speak>
+  <p>
+    <s><prosody rate="slow" pitch="-3st">Deep in the forest...</prosody></s>
+    <break time="900ms"/>
+    <s>a frog found a <emphasis level="strong">golden crown</emphasis>.</s>
+    <break time="1s"/>
+    <s><prosody rate="x-slow" pitch="+2st">He placed it on his head.</prosody></s>
+    <break time="1200ms"/>
+    <s><prosody rate="slow" pitch="-4st" volume="x-loud">Finally...</prosody></s>
+    <break time="700ms"/>
+    <s><emphasis level="strong"><prosody rate="x-slow" pitch="-5st">my enemies will respect me.</prosody></emphasis></s>
+  </p>
+</speak>
