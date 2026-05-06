@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Official Joke API
+  version: 1.0.0
+  description: API for retrieving joke types and random jokes by type.
+
+servers:
+  - url: https://official-joke-api.appspot.com
+
+paths:
+  /types:
+    get:
+      operationId: getJokeTypes
+      summary: Get available joke types
+      description: Returns a list of available joke categories/types.
+      responses:
+        "200":
+          description: A list of joke types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example:
+                - general
+                - programming
+                - knock-knock
+
+  /jokes/{type}/random:
+    get:
+      operationId: getRandomJokeByType
+      summary: Get a random joke by type
+      description: Returns a random joke from the selected joke type.
+      parameters:
+        - name: type
+          in: path
+          required: true
+          description: The joke type to retrieve, such as general, programming, or knock-knock.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A random joke returned as an array with one joke object
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    setup:
+                      type: string
+                    punchline:
+                      type: string
+              example:
+                - type: programming
+                  setup: Why do programmers hate nature?
+                  punchline: Too many bugs.
